@@ -32,13 +32,15 @@ To get a local copy up and running follow these simple example steps.
 
 - A command line interface
 - Install Ruby
+- Install PostgreSQL database
 - Have Rails set up and running
 
 ### Setup
 
 - git clone `git@github.com:emmiiorji/my_blog.git`
 - `cd my_blog`
-- Run `npm install` to download required modules locally
+- Run `bundle install` to download required modules locally
+- Create a `.env` file in the root directory and add your database configuration details
 
 In the project directory, you can run:
 
