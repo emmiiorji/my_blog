@@ -14,14 +14,14 @@ This is a mobile web application developed with React/Redux, that lets you view 
 - Rails
 - PostgreSQL
 
-<!-- ## Video Demo
+## DataBase ERD
 
-https://user-images.githubusercontent.com/20554583/179355165-d4a5db75-61dd-4406-bf7c-008678f358c0.mp4 -->
+Here's the data model represented in an Entity Relationship Diagram (ERD)
+
+![ERD Diagram](https://res.cloudinary.com/emmii/image/upload/v1663165604/general/blog_app_erd_horn9t.png)
 
 
-<!-- ## Live Demo
-
-Here's a [link](https://holidays-worldwide.herokuapp.com/) to a hosted version of the application. -->
+<!-- ## Live Demo -->
 
 
 ## Getting Started
@@ -55,7 +55,6 @@ Launches the test runner.
 ## Deployment
 
 - Deploy on any web server that can host a Node.js runtime environment
-
 
 
 ## Author
