@@ -10,6 +10,8 @@
 # Ignore node_modules folder to be created by stylelint installation
 node_modules/
 
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
