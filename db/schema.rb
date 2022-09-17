@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_15_022728) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_16_165943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_022728) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "post_counter"
+    t.integer "posts_counter"
   end
 
   add_foreign_key "comments", "posts"
