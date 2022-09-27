@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   subject do
     test_user = User.create(name: 'Emmanuel', bio: 'Microverse student', posts_counter: 0)
-    test_post = Post.create(author: test_user, title: 'My first post', text: 'Hello world', comments_counter: 0,
+    test_post = Post.create(author_id: test_user.id, title: 'My first post', text: 'Hello world', comments_counter: 0,
                             likes_counter: 0)
-    Comment.new(author: test_user, post: test_post, text: 'It is a great post. Thanks')
+    Comment.new(author_id: test_user.id, post_id: test_post.id, text: 'It is a great post. Thanks')
   end
   before { subject.save }
 
