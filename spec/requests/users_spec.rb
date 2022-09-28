@@ -10,7 +10,7 @@ RSpec.describe User do
     get '/users'
     expect(response).to render_template('index')
   end
-  
+
   it 'responds with correct status user show' do
     get '/users/:id'
     expect(response).to have_http_status(:ok)
