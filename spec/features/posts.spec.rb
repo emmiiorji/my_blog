@@ -5,4 +5,9 @@ RSpec.describe Post do
     get '/users/:id/posts'
     expect(page).to have_text('This is a list of posts')
   end
+
+  it 'response body includes correct placeholder text for post show' do
+    get '/users/:id/posts/:id'
+    expect(page).to have_text('This is a single post')
+  end
 end
