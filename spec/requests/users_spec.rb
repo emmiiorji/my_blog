@@ -15,4 +15,9 @@ RSpec.describe User do
     get '/users/:id'
     expect(response).to have_http_status(:ok)
   end
+
+  it 'renders correct template for user show' do
+    get '/users/:id'
+    expect(response).to render_template('show')
+  end
 end
