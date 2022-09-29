@@ -36,6 +36,7 @@ To get a local copy up and running follow these simple example steps.
 - `cd my_blog`
 - Run `bundle install` to download required modules locally
 - Create a `.env` file in the root directory and add your database configuration details
+- The .env file should have values for the following keys DB, DB_PASSWORD, DB_USERNAME, DB_HOST and DB_PORT to correspond to the database configuration information and DB_TEST, DB_PASSWORD_TEST, DB_USERNAME_TEST, DB_HOST_TEST, DB_PORT_TEST for the test.
 
 In the project directory, you can run:
 
