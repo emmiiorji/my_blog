@@ -5,12 +5,12 @@ RSpec.describe User, type: :model do
 
   before { subject.save }
 
-  it 'title should be present' do
+  it 'name should be present' do
     subject.name = nil
     expect(subject).to_not be_valid
   end
   it 'bio should be present' do
     subject.bio = nil
-    expect(subject).to_not be_valid
+    expect{subject.save}.to raise_error(ActiveRecord::NotNullViolation)
   end
 end
