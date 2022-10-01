@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   subject do
-    test_user = User.create(name: 'Morris', bio: 'A lovely guy who lives in Nigeria' )
+    test_user = User.create(name: 'Morris', bio: 'A lovely guy who lives in Nigeria')
     Post.create(author_id: test_user.id, title: 'test_title', text: 'test text')
   end
   before { subject.save }

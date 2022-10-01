@@ -11,6 +11,6 @@ RSpec.describe User, type: :model do
   end
   it 'bio should be present' do
     subject.bio = nil
-    expect{subject.save}.to raise_error(ActiveRecord::NotNullViolation)
+    expect { subject.save }.to raise_error(ActiveRecord::NotNullViolation)
   end
 end
