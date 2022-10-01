@@ -1,0 +1,8 @@
+<section>
+  <h2> <%= post[:title] %> </h2>
+  <p> <%= "#{post[:text][..80]}#{'...' if post[:text].length > 80}" %> </p>
+
+  <footer>
+    <p>Comments: <%= post[:comments_counter] %>, Likes: <%= post[:likes_counter] %></p>
+  </footer>
+</section>
