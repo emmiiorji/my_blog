@@ -1,1 +1,18 @@
-<p>This is a single user</p>
+<main>
+  <section>
+    <% if(@user) %>
+      <%= render partial: "user_card", locals: {user: @user} %>
+      <div>
+        <h2>Bio</h2>
+        <p> <%= @user[:bio] %> </p>
+      </div>
+
+      <% @recent_posts.each do |recent_post| %>
+        <%= render partial: "posts/post_card_brief", locals: {post: recent_post} %>
+      <% end %>
+      <p> <%= "#{@user[:name]} has not made any post yet" if @recent_posts.length < 1 %> </p>
+    <% else %>
+      <p> <%= "User does not exist" %> </p>
+    <% end %>
+  </section>
+</main>

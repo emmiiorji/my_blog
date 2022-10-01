@@ -1,1 +1,13 @@
-<p>This is a list of posts</p>
+<main>
+  <% if(@user) %>
+    <%= render partial: 'users/user_card', locals: {user: @user} %>
+
+    <% @posts.each do |post| %>
+      <%= render partial: 'post_card', locals: {post: post, users: @users} %>
+    <% end %>
+
+    <p> <%= @posts.length < 1 ? "#{@user[:name]} has not made any posts" : '' %> </p>
+  <% else %>
+    <%= "User does not exist" %>
+  <% end %>
+</main>
