@@ -1,0 +1,7 @@
+<div>
+  <% comments.each do |comment| %>
+    <% author = users.find(comment.author_id) %>
+    <p> <%= "#{author.name}: #{comment.text}" %> </p>
+  <% end %>
+  <p> <%= "No comments for this post yet. Comments will appear here." if comments.length < 1 %> </p>
+</div>

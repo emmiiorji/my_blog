@@ -1,1 +1,15 @@
-<p>This is a list of posts</p>
+<main class="main-container">
+  <% if(@user) %>
+    <%= render partial: 'users/user_card', locals: {user: @user} %>
+
+    <% @posts.each do |post| %>
+      <a href=<%= "/users/#{@user[:id]}/posts/#{post[:id]}" %> >
+        <%= render partial: 'post_card', locals: {post: post, users: @users} %>
+      </a>
+    <% end %>
+
+    <p class="show-message"> <%= @posts.length < 1 ? "#{@user[:name]} has not made any posts" : '' %> </p>
+  <% else %>
+    <P class="show-message"><%= "User does not exist" %>
+  <% end %>
+</main>

@@ -1,1 +1,9 @@
-<p>This is a list of users</p>
+<main class='main-container'>
+  <h1>List of all users</h1>
+  <% @users.each do |user| %>
+    <a class="user-link" href="/users/<%= user[:id] %>">
+      <%= render partial: "user_card", locals: {user: user} %>
+    </a>
+  <% end %>
+  <p> <%= @users.length < 1 ? "There's no user yet" : '' %> </p>
+</main>

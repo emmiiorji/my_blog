@@ -1,0 +1,7 @@
+<div class="user-card">
+  <img src=<%= user.photo || 'https://bit.ly/3ysgF6D' %> alt=<%= "#{user[:name]}'s_Image" %> />
+  <div class="user-card-info">
+    <h2><%= user[:name] %></h2>
+    <p>Number of posts: <%= user[:posts_counter] %></p>
+  </div>
+</div>

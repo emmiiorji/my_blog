@@ -1,0 +1,66 @@
+.user-card {
+  display: flex;
+}
+
+.user-card,
+.user-bio,
+.recent-posts,
+.post-brief,
+.comment {
+  background: #fafafa;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: 30px 10%;
+  border-radius: 5px;
+}
+
+.user-bio,
+.post-brief,
+.comment {
+  padding: 20px;
+  line-height: 28px;
+  font-size: 1rem;
+}
+
+.recent-posts {
+  padding: 20px 0;
+}
+
+.post-brief {
+  margin: 30px 5%;
+  width: 90%;
+  line-height: 25px;
+}
+
+.user-card img {
+  width: 120px;
+  border-radius: 50%;
+  margin-right: 15px;
+  padding: 20px;
+}
+
+.user-card-info {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+  border-left: 1px solid gray;
+}
+
+.user-card-info p {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.user-card-info h2 {
+  font-size: 2rem;
+  margin-right: 120px;
+}
+
+.show-message {
+  font-size: 1.2rem;
+  text-align: center;
+  color: dimgray;
+}
