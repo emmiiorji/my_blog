@@ -1,0 +1,7 @@
+<div>
+  <%= render partial: 'post_card_brief', locals: {post: post} %>
+  
+  <% comments = post.recent_comments %>
+
+  <%= render partial: 'post_comments_card', locals: {comments: comments, users: users} %>
+</div>
