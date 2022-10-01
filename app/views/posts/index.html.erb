@@ -1,13 +1,15 @@
-<main>
+<main class="main-container">
   <% if(@user) %>
     <%= render partial: 'users/user_card', locals: {user: @user} %>
 
     <% @posts.each do |post| %>
-      <%= render partial: 'post_card', locals: {post: post, users: @users} %>
+      <a href=<%= "/users/#{@user[:id]}/posts/#{post[:id]}" %> >
+        <%= render partial: 'post_card', locals: {post: post, users: @users} %>
+      </a>
     <% end %>
 
-    <p> <%= @posts.length < 1 ? "#{@user[:name]} has not made any posts" : '' %> </p>
+    <p class="show-message"> <%= @posts.length < 1 ? "#{@user[:name]} has not made any posts" : '' %> </p>
   <% else %>
-    <%= "User does not exist" %>
+    <P class="show-message"><%= "User does not exist" %>
   <% end %>
 </main>
