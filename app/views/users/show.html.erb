@@ -16,6 +16,9 @@
         <% end %>
         <p class="show-message"> <%= "#{@user[:name]} has not made any post yet" if @recent_posts.length < 1 %> </p>
       </div>
+        <%= link_to new_user_post_path(@user) do%>
+          <button class="new-post-button">New post</button>
+        <% end %>
     <% else %>
       <p class="show-message"> <%= "User does not exist" %> </p>
     <% end %>
