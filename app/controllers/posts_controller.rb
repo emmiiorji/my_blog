@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     if post.save
       redirect_to user_url(author)
     else
-      render :new, locals: { post: post }
+      render :new, locals: { post: }
     end
   end
 end
