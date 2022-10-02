@@ -1,0 +1,11 @@
+<p><b>Comment on <%=@post.author[:name]%>'s post</b><p>
+
+<%= form_with url: user_post_comments_path(@user, @post), method: :post, local: true, scope: :comment do |form| %>
+  <div>
+    <%= form.text_area :text, :required => true %>
+  </div>
+
+  <div>
+    <%= form.submit "Post Comment" %>
+  </div>
+<% end %>
