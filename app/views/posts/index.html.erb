@@ -2,6 +2,8 @@
   <% if(@user) %>
     <%= render partial: 'users/user_card', locals: {user: @user} %>
 
+    <%= link_to "New post", new_user_post_path %>
+
     <% @posts.each do |post| %>
       <a href=<%= "/users/#{@user[:id]}/posts/#{post[:id]}" %> >
         <%= render partial: 'post_card', locals: {post: post, users: @users} %>
