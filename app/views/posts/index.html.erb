@@ -1,6 +1,11 @@
 <main class="main-container">
   <% if(@user) %>
-    <%= render partial: 'users/user_card', locals: {user: @user} %>
+    <h1></h1>
+    <%= link_to user_path(@user) do %>
+      <%= render partial: 'users/user_card', locals: {user: @user} %>
+    <%end %>
+
+    <%= link_to "New post", new_user_post_path %>
 
     <% @posts.each do |post| %>
       <a href=<%= "/users/#{@user[:id]}/posts/#{post[:id]}" %> >

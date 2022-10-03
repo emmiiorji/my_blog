@@ -3,6 +3,8 @@ class Like < ApplicationRecord
   belongs_to :post
   after_save :update_likes_count
 
+  validates :author, uniqueness: { scope: :post }
+
   private
 
   def update_likes_count
