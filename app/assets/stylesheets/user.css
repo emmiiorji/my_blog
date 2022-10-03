@@ -32,6 +32,11 @@
   margin-bottom: 20px;
 }
 
+.user-card-info h2 {
+  font-size: 2rem;
+  margin-right: 120px;
+}
+
 .recent-posts .post-brief h2 {
   font-size: 1.2rem;
 }
@@ -44,7 +49,7 @@
 
 .post-brief .comments-likes {
   text-align: right;
-  color: blue
+  color: blue;
 }
 
 .new-post-button {
@@ -85,11 +90,6 @@
   justify-self: flex-end;
 }
 
-.user-card-info h2 {
-  font-size: 2rem;
-  margin-right: 120px;
-}
-
 .show-message {
   font-size: 1.2rem;
   text-align: center;
@@ -115,7 +115,7 @@
   margin: 10px 0;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .form-container label {
