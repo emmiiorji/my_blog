@@ -3,6 +3,6 @@
   <p> <%= "#{post[:text][..200]}#{'...' if post[:text].length > 80}" %> </p>
 
   <footer>
-    <p>Comments: <%= post[:comments_counter] %>, Likes: <%= post[:likes_counter] %></p>
+    <p class="comments-likes">Comments: <span class="show-count"><%= post[:comments_counter] %></span>, Likes: <span class="show-count"><%= post[:likes_counter] %> </span> </p>
   </footer>
 </section>

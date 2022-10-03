@@ -1,5 +1,6 @@
 <main class="main-container">
   <% if(@user) %>
+    <h1></h1>
     <%= link_to user_path(@user) do %>
       <%= render partial: 'users/user_card', locals: {user: @user} %>
     <%end %>

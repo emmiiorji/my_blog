@@ -32,10 +32,19 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
 .main-container {
   background: #f3f3f3;
   width: 100%;
   min-height: 100vh;
+  margin-bottom: 20px;
 }
 
 .main-container h1 {
