@@ -40,7 +40,8 @@ h1 {
   text-align: center;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   border: none;
 }
