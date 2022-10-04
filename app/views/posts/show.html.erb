@@ -15,10 +15,10 @@
 
       <section class="comment">
         <header>
-          <h2> <%= "#{@post.title} by #{@user.name}" %> </h2>
+          <h2 class="post-title"> <%= "#{@post.title} by #{@user.name}" %> </h2>
           <p> <%= "Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}" %> </p>
         </header>
-        <p> <%= @post.text %> </p>
+        <p class="post-text"> <%= @post.text %> </p>
       </section>
 
       <%= render partial: 'post_comments_card', locals: {comments: @comments, users: @users} %>
