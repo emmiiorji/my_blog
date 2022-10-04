@@ -19,15 +19,3 @@ RSpec.describe 'Users', type: :request do
     expect(response).to render_template('show')
   end
 end
-
-RSpec.describe 'Users', type: :feature do
-  it 'response body includes correct placeholder text for users index' do
-    visit '/users'
-    expect(page).to have_text('List of all users')
-  end
-
-  it 'response body includes correct placeholder text for user show' do
-    visit '/users/:id'
-    expect(page).to have_text('This is a single user')
-  end
-end
