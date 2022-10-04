@@ -3,6 +3,5 @@
   <% @users.each do |user| %>
     <%= render partial: "user_card", locals: {user: user} %>
   <% end %>
-  <%= will_paginate @users %>
   <p> <%= @users.length < 1 ? "There's no user yet" : '' %> </p>
 </main>

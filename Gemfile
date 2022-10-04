@@ -70,7 +70,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem 'bullet'
 end
 
 group :test do
@@ -82,4 +81,3 @@ end
 
 # Rubocop for Ruby linter checks
 gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'will_paginate', '~> 3.3'
