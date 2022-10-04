@@ -13,8 +13,6 @@
       </a>
     <% end %>
 
-    <%= will_paginate @posts %>
-
     <p class="show-message"> <%= @posts.length < 1 ? "#{@user[:name]} has not made any posts" : '' %> </p>
   <% else %>
     <P class="show-message"><%= "User does not exist" %>

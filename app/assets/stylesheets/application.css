@@ -40,12 +40,6 @@ h1 {
   text-align: center;
 }
 
-input,
-textarea {
-  outline: none;
-  border: none;
-}
-
 .main-container {
   background: #f3f3f3;
   width: 100%;
