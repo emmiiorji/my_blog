@@ -27,4 +27,11 @@ RSpec.describe 'Post Show', type: :feature do
     post_text = find('.post-text')
     expect(post_text).to have_content(@post.text)
   end
+
+  it 'shows comments of each commentors' do
+    comments = @post.comments
+    comments.each do |comment|
+      expect(page).to have_content(comment.text)
+    end
+  end
 end
