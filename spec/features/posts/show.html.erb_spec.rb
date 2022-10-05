@@ -28,6 +28,13 @@ RSpec.describe 'Post Show', type: :feature do
     expect(post_text).to have_content(@post.text)
   end
 
+  it 'shows username of post commentors' do
+    comments = @post.comments
+    comments.each do |comment|
+      expect(page).to have_content(@user[comment.author_id - 1].name)
+    end
+  end
+
   it 'shows comments of each commentors' do
     comments = @post.comments
     comments.each do |comment|
