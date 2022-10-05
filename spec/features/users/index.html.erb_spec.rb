@@ -14,8 +14,10 @@ RSpec.describe 'User Index', type: :feature do
     )
     @user1_url = "a[href = '#{user_path(@user1.id)}']"
     @user2_url = "a[href = '#{user_path(@user2.id)}']"
+
     visit users_path
   end
+
   it 'shows the right content' do
     [@user1, @user2].each do |user|
       expect(page).to have_content(user.name)
@@ -23,10 +25,12 @@ RSpec.describe 'User Index', type: :feature do
       expect(page).to have_content("Number of posts: #{user.posts_counter}")
     end
   end
+
   it "When I click on a user, I am redirected to that user's show page" do
     find(@user1_url).click
     expect(page).to have_content(@user1.bio)
   end
+
   it "When I click on a user, I am redirected to that user's show page" do
     find(@user2_url).click
     expect(page).to have_content(@user2.bio)
