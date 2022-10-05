@@ -8,10 +8,8 @@ RSpec.describe 'Post Show', type: :feature do
     visit user_post_path(@user.id, @post.id)
   end
 
-  # it 'shows username of post commentors' do
-  #   comments = @post.comments
-  #   comments.each do |comment|
-  #     expect(page).to have_content(@user[comment.author_id - 1].name)
-  #   end
-  # end
+  it 'shows a post title and the author' do
+    title_element = find('.post-title')
+    expect(title_element).to have_content("#{@post.title} by #{@user.name}")
+  end
 end
