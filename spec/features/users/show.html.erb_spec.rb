@@ -39,4 +39,9 @@ RSpec.describe 'User Show', type: :feature do
       expect(page).to have_content(post.text)
     end
   end
+
+  it 'has the see all posts button' do
+    button = find("#{@posts_url} button")
+    expect(button).to have_text('See all posts')
+  end
 end
