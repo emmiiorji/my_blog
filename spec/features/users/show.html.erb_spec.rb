@@ -23,4 +23,11 @@ RSpec.describe 'User Show', type: :feature do
     expect(page).to have_content("Number of posts: #{@user.posts_counter}")
     expect(page).to have_content(@user.bio)
   end
+
+  it 'shows the last three posts' do
+    @posts.each do |post|
+      expect(page).to have_content(post.title)
+    end
+    expect(page).to_not have_content(@post1.title)
+  end
 end
