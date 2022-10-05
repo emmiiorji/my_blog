@@ -32,10 +32,10 @@ RSpec.describe 'User Show', type: :feature do
   end
 
   it "shows redirects to the post's show page on click of any of the posts" do
-    @posts.each do |post|      
+    @posts.each do |post|
       post_anchor = "a[href='#{user_post_path(@user.id, post.id)}']"
       find(post_anchor).click
-      expect(page).to have_content("Post Detail")
+      expect(page).to have_content('Post Detail')
       expect(page).to have_content(post.text)
     end
   end
