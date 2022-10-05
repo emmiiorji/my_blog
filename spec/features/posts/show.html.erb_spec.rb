@@ -12,4 +12,14 @@ RSpec.describe 'Post Show', type: :feature do
     title_element = find('.post-title')
     expect(title_element).to have_content("#{@post.title} by #{@user.name}")
   end
+
+  it 'shows comments and likes counts' do
+    comments_and_likes = all('.comments-likes')
+    comments_and_likes.each do |comment_and_like|
+      expect(comment_and_like).to have_content('Comments: ')
+      expect(comment_and_like).to have_content(@post.comments_counter.to_s)
+      expect(comment_and_like).to have_content('Likes: ')
+      expect(comment_and_like).to have_content(@post.likes_counter.to_s)
+    end
+  end
 end
