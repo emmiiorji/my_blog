@@ -22,4 +22,9 @@ RSpec.describe 'Post Show', type: :feature do
       expect(comment_and_like).to have_content(@post.likes_counter.to_s)
     end
   end
+
+  it 'shows the post body' do
+    post_text = find('.post-text')
+    expect(post_text).to have_content(@post.text)
+  end
 end
