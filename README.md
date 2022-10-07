@@ -2,7 +2,6 @@
 
 A blog website that will that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-
 ## Built With
 
 - Ruby
@@ -14,7 +13,6 @@ A blog website that will that will show the list of posts and empower readers to
 Here's the data model represented in an Entity Relationship Diagram (ERD)
 
 ![ERD Diagram](https://res.cloudinary.com/emmii/image/upload/v1663165604/general/blog_app_erd_horn9t.png)
-
 
 <!-- ## Live Demo -->
 

@@ -6,6 +6,10 @@ class CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
+    unless current_user
+      redirect_to new_user_session_url, notice: 'Please, sign in to comment'
+      return
+    end
     @comment = current_user.comments.new(comment_params)
     @comment.post_id = @post.id
 
@@ -15,6 +19,12 @@ class CommentsController < ApplicationController
       flash[:alert] = 'Could not create the comment'
       render :new
     end
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to user_post_url(comment.author, params[:post_id]), notice: 'Comment deleted'
   end
 
   private
