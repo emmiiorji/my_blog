@@ -6,6 +6,10 @@ class CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
+    if !current_user
+      redirect_to new_user_session_url, notice: 'Please, sign in to comment'
+      return
+    end
     @comment = current_user.comments.new(comment_params)
     @comment.post_id = @post.id
 
