@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
-    if !current_user
+    unless current_user
       redirect_to new_user_session_url, notice: 'Please, sign in to comment'
       return
     end
@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
     comment.destroy
     redirect_to user_post_url(comment.author, params[:post_id]), notice: 'Comment deleted'
   end
-  
+
   private
 
   def comment_params
