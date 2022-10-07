@@ -3,16 +3,10 @@
   <% if !@user %>
     <p class="show-message"> <%= "User does not exist." %> </p>
   <% elsif @post == -1 %>
-    <p class="show-message"> <%= "Requested post by the user is not available. It's likely they create it." %> </p>
+    <p class="show-message"> <%= "Requested post by the user is not available. It's likely they didn't create it." %> </p>
   <% else %>
     <h1>Post Detail</h2>
     <div>
-
-      <%= render 'comments/form' %>
-      <%= form_with url: user_post_likes_url(@user, @post), method: 'post' do |form| %>
-        <%= form.submit 'Like' %>
-      <% end %>
-
       <section class="comment">
         <header>
           <h2 class="post-title"> <%= "#{@post.title} by #{@user.name}" %> </h2>
@@ -20,6 +14,14 @@
         </header>
         <p class="post-text"> <%= @post.text %> </p>
       </section>
+
+      <%= render 'comments/form' %>
+      <%= form_with url: user_post_likes_url(@user, @post), method: 'post' do |form| %>
+        <%= form.submit 'Like' %>
+      <% end %>
+      <% if can? :destroy, @post %>
+        <%= button_to 'Delete Post', user_post_path(current_user, @post), method: :delete%>
+      <% end %>
 
       <%= render partial: 'post_comments_card', locals: {comments: @comments, users: @users} %>
     </div>
