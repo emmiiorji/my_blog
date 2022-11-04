@@ -63,7 +63,11 @@ Launches the test runner.
 - Twitter: [@emmiiorji](https://twitter.com/emmiiorji)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/orji-emmanuel)
 
+👤 **Hans Zizold**
 
+ - GitHub:[@githubhandle](https://github.com/HansZizold) 
+- Twitter:[@twitterhandle](https://twitter.com/hanzio27) 
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/hans-paul-zizold-37129037/) 
 
 ## 🤝 Contributing
 
