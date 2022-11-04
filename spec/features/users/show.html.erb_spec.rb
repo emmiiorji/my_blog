@@ -31,13 +31,22 @@ RSpec.describe 'User Show', type: :feature do
     expect(page).to_not have_content(@post1.title)
   end
 
-  it "shows redirects to the post's show page on click of any of the posts" do
-    @posts.each do |post|
-      post_anchor = "a[href='#{user_post_path(@user.id, post.id)}']"
-      find(post_anchor).click
-      expect(page).to have_content('Post Detail')
-      expect(page).to have_content(post.text)
-    end
+  it "shows redirects to the post's show page on click of a post" do
+    find("a[href='#{user_post_path(@user.id, @posts[0].id)}']").click
+    expect(page).to have_content('Post Detail')
+    expect(page).to have_content(@posts[0].text)
+  end
+
+  it "shows redirects to the post's show page on click of a post" do
+    find("a[href='#{user_post_path(@user.id, @posts[1].id)}']").click
+    expect(page).to have_content('Post Detail')
+    expect(page).to have_content(@posts[1].text)
+  end
+
+  it "shows redirects to the post's show page on click of a post" do
+    find("a[href='#{user_post_path(@user.id, @posts[2].id)}']").click
+    expect(page).to have_content('Post Detail')
+    expect(page).to have_content(@posts[2].text)
   end
 
   it 'has the see all posts button' do
