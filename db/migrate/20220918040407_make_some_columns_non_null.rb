@@ -10,6 +10,5 @@ class MakeSomeColumnsNonNull < ActiveRecord::Migration[7.0]
     change_column_null :posts, :title, false
     change_column_null :posts, :text, false
     change_column_null :users, :name, false
-    change_column_null :users, :bio, false
   end
 end
