@@ -122,6 +122,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
+  rails db:migrate
   rails server
 ```
 
@@ -133,14 +134,14 @@ To run tests, run the following command:
   bin/rails test test/models/article_test.rb
 ```
 
-### Deployment
+<!-- ### Deployment
 
 You can deploy this project using:
 
 ```sh
   
 
-```
+``` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
