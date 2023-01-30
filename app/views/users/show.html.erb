@@ -1,0 +1,32 @@
+<main class="main-container">
+  <section class="about-user">
+    <% if(@user) %>
+      <h1>About User</h1>
+      <%= render partial: "user_card", locals: {user: @user} %>
+      <div class="user-bio">
+        <h2>Bio</h2>
+        <p> <%= @user[:bio] %> </p>
+      </div>
+
+      <div class="recent-posts">
+        <h2> Posts by <%= @user[:name] %> </h2>
+        <% @recent_posts.each do |recent_post| %>
+          <a href=<%= "/users/#{@user[:id]}/posts/#{recent_post[:id]}" %> >
+            <%= render partial: "posts/post_card_brief", locals: {post: recent_post} %>
+          </a>
+        <% end %>
+        <p class="show-message"> <%= "#{@user[:name]} has not made any post yet" if @recent_posts.length < 1 %> </p>
+        
+        <%= link_to user_posts_path(@user.id) do %>
+          <button class="see-all-posts">See all posts</button>
+        <% end %>
+
+        <%= link_to new_user_post_path(@user) do %>
+          <button class="new-post-button">New post</button>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="single show-message"> <%= "User does not exist" %> </p>
+    <% end %>
+  </section>
+</main>

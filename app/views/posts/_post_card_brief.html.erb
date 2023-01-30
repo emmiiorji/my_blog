@@ -1,0 +1,8 @@
+<section class="post-brief">
+  <h2> <%= post[:title] %> </h2>
+  <p> <%= "#{post[:text][..200]}#{'...' if post[:text].length > 200}" %> </p>
+
+  <footer>
+    <p class="comments-likes">Comments: <span class="show-count"><%= post[:comments_counter] %></span>, Likes: <span class="show-count"><%= post[:likes_counter] %> </span> </p>
+  </footer>
+</section>
