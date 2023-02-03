@@ -1,61 +1,155 @@
-# My BLOG
+<a name="readme-top"></a>
 
-A blog website that will that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+<!-- TABLE OF CONTENTS -->
 
+# 📗 Table of Contents
 
-## Built With
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [📍 Database ERD](#database-erd)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Author](#author)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-- Ruby
-- Rails
-- PostgreSQL
+<!-- PROJECT DESCRIPTION -->
 
-## DataBase ERD
+# 📖 My Blog <a name="about-project"></a>
 
-Here's the data model represented in an Entity Relationship Diagram (ERD)
+This is a blog website that will that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-![ERD Diagram](https://res.cloudinary.com/emmii/image/upload/v1663165604/general/blog_app_erd_horn9t.png)
+## 🛠 Built With <a name="built-with"></a>
 
+### Tech Stack <a name="tech-stack"></a>
 
-<!-- ## Live Demo -->
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
-## Getting Started
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-To get a local copy up and running follow these simple example steps.
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Create, update and delete a post**
+- **Comment on a post**
+- **Like a post**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+<!-- Database Entity Relationship Diagram-->
+
+## 📍 Database Entity Relationship Diagram <a name="database-erd"></a>
+
+- [Link to the Database ERD](https://res.cloudinary.com/emmii/image/upload/v1663165604/general/blog_app_erd_horn9t.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
+In order to run this project you need:
 - A command line interface
-- Install Ruby
-- Install PostgreSQL database
-- Have Rails set up and running
+- Install [Ruby](https://www.ruby-lang.org/)
+- Install [PostgreSQL database](https://www.postgresql.org/)
+- Have Rails set up and running (`gem install rails`)
 
 ### Setup
 
-- git clone `git@github.com:emmiiorji/my_blog.git`
-- `cd my_blog`
-- Run `bundle install` to download required modules locally
-- Create a `.env` file in the root directory and add your database configuration details
-- The .env file should have values for the following keys DB, DB_PASSWORD, DB_USERNAME, DB_HOST and DB_PORT to correspond to the database configuration information and DB_TEST, DB_PASSWORD_TEST, DB_USERNAME_TEST, DB_HOST_TEST, DB_PORT_TEST for the test.
-
-In the project directory, you can run:
-
-#### `rails server`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone this repository to your desired folder:
+    ```sh
+    cd my-folder
+    git clone git@github.com:emmiiorji/my_blog.git
+    ```
+- Create a `.env` file in the root directory with your database configuration details following the `.env.example` file as guide
 
 
-#### `rspec`
+### Install
 
-Launches the test runner.
+Install this project with:
 
-## Deployment
+```sh
+  cd my_blog
+  bundle install
+```
 
-- Deploy on any web server that can host a Node.js runtime environment
+### Usage
 
+To run the project, execute the following command:
 
-## Author
+```sh
+  rails db:migrate
+  rails server
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  bin/rails test test/models/article_test.rb
+```
+
+<!-- ### Deployment
+
+You can deploy this project using:
+
+```sh
+  
+
+``` -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
+> Mention all of the collaborators of this project.
 
 👤 **Emmanuel Orji-Ihuoma**
 
@@ -63,26 +157,70 @@ Launches the test runner.
 - Twitter: [@emmiiorji](https://twitter.com/emmiiorji)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/orji-emmanuel)
 
-👤 **Hans Zizold**
+👤 **Haker AbuDrais**
 
- - GitHub:[@githubhandle](https://github.com/HansZizold) 
-- Twitter:[@twitterhandle](https://twitter.com/hanzio27) 
-- LinkedIn:[LinkedIn](https://www.linkedin.com/in/hans-paul-zizold-37129037/) 
+- GitHub: [@shakerAbuDrais](https://github.com/shakerAbuDrais)
+- Twitter: [@shakerabady](https://twitter.com/shakerabady)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **Redesign user interface**
+- [ ] **Allow level 2 commenting**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-- [Microverse](https://www.microverse.org/) for the guide
+If you like this project, please give a ⭐️!
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank [Microverse](https://www.microverse.org/) for the guide
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ -->
+
+<!-- ## ❓ FAQ <a name="faq"></a>
+
+> Add at least 2 questions new developers would ask when they decide to use your project.
+
+- **[Question_1]**
+
+  - [Answer_1]
+
+- **[Question_2]**
+
+  - [Answer_2] -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
