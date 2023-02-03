@@ -16,6 +16,11 @@
           </a>
         <% end %>
         <p class="show-message"> <%= "#{@user[:name]} has not made any post yet" if @recent_posts.length < 1 %> </p>
+        
+        <%= link_to user_posts_path(@user.id) do %>
+          <button class="see-all-posts">See all posts</button>
+        <% end %>
+
         <%= link_to new_user_post_path(@user) do %>
           <button class="new-post-button">New post</button>
         <% end %>

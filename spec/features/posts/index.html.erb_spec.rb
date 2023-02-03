@@ -51,7 +51,7 @@ RSpec.describe 'Post Index', type: :feature do
       expect(comment_and_like).to have_content(@post1.likes_counter.to_s)
     end
   end
-  
+
   it "redirects to that post's show page after clicking a post" do
     find("a[href='#{user_post_path(@user.id, @post1.id)}']").click
     expect(page).to have_selector("input[type='submit'][value='Like']")
