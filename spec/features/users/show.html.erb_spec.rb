@@ -32,10 +32,10 @@ RSpec.describe 'User Show', type: :feature do
   end
 
   it "shows redirects to the post's show page on click of any of the posts" do
-    @posts.each do |post|      
+    @posts.each do |post|
       post_anchor = "a[href='#{user_post_path(@user.id, post.id)}']"
       find(post_anchor).click
-      expect(page).to have_content("Post Detail")
+      expect(page).to have_content('Post Detail')
       expect(page).to have_content(post.text)
     end
   end
@@ -43,5 +43,11 @@ RSpec.describe 'User Show', type: :feature do
   it 'has the see all posts button' do
     button = find("#{@posts_url} button")
     expect(button).to have_text('See all posts')
+  end
+
+  it 'redirects to posts index on clicking of the See all posts button' do
+    find(@posts_url).click
+    new_post_anchor = find("a[href='#{new_user_post_path(@user.id)}']")
+    expect(new_post_anchor).to have_content('New Post')
   end
 end
