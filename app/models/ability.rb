@@ -8,13 +8,13 @@ class Ability
 
     can :read, :all
 
-    can :delete, Post, { author_id: user[:id] }
-    can :delete, Comment, { author_id: user[:id] }
+    can :destroy, Post, { author_id: user[:id] }
+    can :destroy, Comment, { author_id: user[:id] }
 
     return unless user.is? :admin
 
-    can :delete, Post
-    can :delete, Comment
+    can :destroy, Post
+    can :destroy, Comment
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
