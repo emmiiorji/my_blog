@@ -1,6 +1,10 @@
 class LikesController < ApplicationController
   def create
     post = Post.find(params[:post_id])
+    if !current_user
+      redirect_to new_user_session_url, notice: 'Please, sign in to like'
+      return
+    end
     author = current_user
     like = Like.new(params.permit(:author, :post))
     like.author = author
