@@ -18,11 +18,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    if !current_user
+    unless current_user
       redirect_to new_user_registration_url, notice: 'Please, signup to make a post'
       return
     end
-    
+
     author = current_user
     post = Post.new(params.require(:post).permit(:title, :text))
     post.author = author
