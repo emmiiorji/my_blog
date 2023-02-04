@@ -3,6 +3,7 @@ class ApiController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :authenticate_token!
   before_action :set_default_format
+
   private
 
   def set_default_format
