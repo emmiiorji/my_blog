@@ -80,7 +80,9 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
 gem 'devise'
+gem 'jwt'
 
 # Rubocop for Ruby linter checks
 gem 'rubocop', '>= 1.0', '< 2.0'
