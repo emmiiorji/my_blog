@@ -18,14 +18,23 @@ class PostsController < ApplicationController
   end
 
   def create
+    if !current_user
+      redirect_to new_user_registration_url, notice: 'Please, signup to make a post'
+      return
+    end
+    
     author = current_user
     post = Post.new(params.require(:post).permit(:title, :text))
     post.author = author
-
     if post.save
       redirect_to user_url(author)
     else
       render :new, locals: { post: }
     end
+  end
+
+  def destroy
+    Post.find_by(id: params[:id]).destroy
+    redirect_to user_path(current_user), notice: 'Post deleted'
   end
 end
